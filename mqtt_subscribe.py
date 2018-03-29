@@ -5,7 +5,7 @@ port = 1883 # Default port for unencrypted MQTT
 
 topic = "elec3542/#" # Wildcard '#' indicates that all sub-topics (e.g., elec3542/test, elec3542/sensor/temperature, etc.)
 
-def on_connect(client, userdata, rc):
+def on_connect(client, userdata, flags, rc):
 	# Successful connection is '0'
 	print("Connection result: " + str(rc))
 	if rc == 0:
